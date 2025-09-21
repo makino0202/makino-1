@@ -1,0 +1,267 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牧野商会 - 選ばれる理由</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        /* カスタムスタイルとアニメーション */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e6f7ff; /* カード外の背景色を変更 */
+            color: #333;
+            overflow-x: hidden; /* 横方向のスクロールを非表示にする */
+        }
+
+        .container-wrapper {
+            max-width: 1200px;
+        }
+
+        .card {
+            min-height: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            background-color: white; /* カードの背景色を白に戻す */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+
+        .card h3 {
+            min-height: 48px;
+        }
+
+        .shine-button {
+            display: inline-block;
+            position: relative;
+            background-color: #ff6600;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .shine-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0.6) 50%,
+                rgba(255, 255, 255, 0.3) 100%
+            );
+            transform: skewX(-20deg);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        .shine-button:hover {
+            background-color: #e65c00;
+            transform: translateY(-2px);
+        }
+
+        @keyframes shine {
+            0% { left: -75%; }
+            20% { left: 125%; }
+            100% { left: 125%; }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper mx-auto px-4 sm:px-8">
+        <!-- 牧野商会が選ばれる理由セクション -->
+        <div class="my-24">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">牧野商会が選ばれる理由</h2>
+                <p class="text-base sm:text-lg text-gray-600">私たちならではの6つのサポートが、日々の業務フローを徹底的に変えます。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- カード1 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-start text-left">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">① ご注文前：不安ゼロへ！</h3>
+                    <p class="text-gray-600 flex-grow">次回のご注文に備え、欠品対策を実施。発注担当者様が安心して次のステップへ進める環境を整えます。</p>
+                    <a href="https://sites.google.com/view/gearity/%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%8C%E9%81%B8%E3%81%B0%E3%82%8C%E3%82%8B%E7%90%86%E7%94%B1/%E6%AC%A0%E5%93%81%E5%AF%BE%E7%AD%96" class="text-blue-500 font-semibold mt-4 hover:underline ml-auto">詳細はこちら ＞</a>
+                </div>
+
+                <!-- カード2 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-start text-left">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">② ご注文時：ストレスフリー！</h3>
+                    <p class="text-gray-600 flex-grow">電話・FAX・メールなど、ご希望の方法に柔軟対応。専用発注書のご提供、定期自動納品など、発注業務をしっかり支援します。</p>
+                    <a href="https://sites.google.com/view/gearity/%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%8C%E9%81%B8%E3%81%B0%E3%82%8C%E3%82%8B%E7%90%86%E7%94%B1/%E6%89%8B%E9%96%93%E3%82%92%E5%89%8A%E3%82%8B" class="text-blue-500 font-semibold mt-4 hover:underline ml-auto">詳細はこちら ＞</a>
+                </div>
+                
+                <!-- カード3 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-start text-left">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">③ 新規ご購入：最適な答えが！</h3>
+                    <p class="text-gray-600 flex-grow">お客様の声をとことん伺い、最適な商品をご提案。「業者が売りたい」より「お客様が欲しい」を常に最優先します。</p>
+                    <a href="https://sites.google.com/view/gearity/%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%8C%E9%81%B8%E3%81%B0%E3%82%8C%E3%82%8B%E7%90%86%E7%94%B1/%E7%B4%8D%E5%BE%97%E3%81%AE%E7%90%86%E7%94%B1" class="text-blue-500 font-semibold mt-4 hover:underline ml-auto">詳細はこちら ＞</a>
+                </div>
+
+                <!-- カード4 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-start text-left">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17a4 4 0 01-4 4H8a4 4 0 01-4-4V5a2 2 0 012-2h8a2 2 0 012 2v12zM18 10h4M18 14h4M12 21h0"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">④ ユニフォーム：負担を最小限に</h3>
+                    <p class="text-gray-600 flex-grow">サイズ合わせや配布の手間を軽減。ユニフォームの全プロセスを弊社がサポートし、配布作業の悩みを解消します。</p>
+                    <a href="https://sites.google.com/view/gearity/%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%8C%E9%81%B8%E3%81%B0%E3%82%8C%E3%82%8B%E7%90%86%E7%94%B1/%E3%83%A6%E3%83%8B%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0" class="text-blue-500 font-semibold mt-4 hover:underline ml-auto">詳細はこちら ＞</a>
+                </div>
+
+                <!-- カード5 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-start text-left">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12h14"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">⑤ 情報・ご提案：コスト削減にも</h3>
+                    <p class="text-gray-600 flex-grow">自社の納入品でも、常にコスト削減に全力で取り組みます。小さな工夫や販売データのご提供など、多角的に発注担当者様をサポートします。</p>
+                    <a href="https://sites.google.com/view/gearity/%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%8C%E9%81%B8%E3%81%B0%E3%82%8C%E3%82%8B%E7%90%86%E7%94%B1/%E6%83%85%E5%A0%B1%E3%81%94%E6%8F%90%E6%A1%88" class="text-blue-500 font-semibold mt-4 hover:underline ml-auto">詳細はこちら ＞</a>
+                </div>
+
+                <!-- カード6 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-start text-left">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">⑥ 値上げ対策：多角的なご提案</h3>
+                    <p class="text-gray-600 flex-grow">突然の値上げにも安心。猶予期間の設定だけでなく、回避策や代替品の提案、減策の組み合わせなど、コストの急増を可能な限り抑えます。</p>
+                    <a href="https://sites.google.com/view/gearity/%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%8C%E9%81%B8%E3%81%B0%E3%82%8C%E3%82%8B%E7%90%86%E7%94%B1/%E5%80%A4%E4%B8%8A%E3%81%92%E5%AF%BE%E7%AD%96" class="text-blue-500 font-semibold mt-4 hover:underline ml-auto">詳細はこちら ＞</a>
+                </div>
+            </div>
+            
+            <!-- 選ばれる理由一覧ボタンとお問い合わせボタンを追加 -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                <a href="https://sites.google.com/view/gearity/%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%8C%E9%81%B8%E3%81%B0%E3%82%8C%E3%82%8B%E7%90%86%E7%94%B1" class="btn bg-blue-500 text-white hover:bg-blue-600">選ばれる理由一覧を見る</a>
+                <a href="https://forms.gle/9weg5r4EDeez2n9y9" target="_blank" class="shine-button">
+                    ✉ お問い合わせはこちら
+                </a>
+            </div>
+        </div>
+        
+        <!-- 改善・解決事例セクション -->
+        <div class="my-24 rounded-3xl py-16 px-6" style="background-color: #e6f7ff;">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">改善・解決事例</h2>
+                <p class="text-base sm:text-lg text-gray-600">実際にご提案して改善した実例を、どんどんご紹介していきます。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 事例1 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-start text-left">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-700 mb-2">ウエスご提案でコスト削減に成功</h3>
+                    <p class="text-gray-600 flex-grow">より安価で性能の良いウエスをご提案し、年間で72万円以上のコスト削減に成功しました。</p>
+                </div>
+
+                <!-- 事例2 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-start text-left">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-700 mb-2">転倒事故防止への貢献</h3>
+                    <p class="text-gray-600 flex-grow">現場の声を伺い、滑りにくく、つま先をしっかり保護する安全靴をご提案。現場の安全性を向上させ、安心して作業ができる環境を整えました。</p>
+                </div>
+
+                <!-- 事例3 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-start text-left">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17a4 4 0 01-4 4H8a4 4 0 01-4-4V5a2 2 0 012-2h8a2 2 0 012 2v12zM18 10h4M18 14h4M12 21h0"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-700 mb-2">作業手袋でケガのリスクを軽減</h3>
+                    <p class="text-gray-600 flex-grow">鋭利な設備を扱う作業現場の安全対策を強化。耐切創レベル5の手袋をご提案し、安心して作業ができる環境を整えました。</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                <!-- リンクはplaceholderのまま -->
+                <a href="https://sites.google.com/view/gearity/%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%8C%E9%81%B8%E3%81%B0%E3%82%8C%E3%82%8B%E7%90%86%E7%94%B1/%E6%94%B9%E5%96%84%E8%A7%A3%E6%B1%BA%E4%BA%8B%E4%BE%8B%E3%81%AE%E3%81%94%E7%B4%B9%E4%BB%8B" class="btn bg-blue-500 text-white hover:bg-blue-600">全ての事例を見る</a>
+                <a href="https://forms.gle/9weg5r4EDeez2n9y9" target="_blank" class="shine-button">
+                    ✉ お問い合わせはこちら
+                </a>
+            </div>
+        </div>
+
+        <!-- 取扱い商品セクション -->
+        <div class="my-24">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">取り扱い商品</h2>
+                <p class="text-base sm:text-lg text-gray-600">こちらの3つの項目から、商品関連ページをご覧いただけます。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 誘導用カード1 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-center text-center">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM12 12v-2l3-3"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">取り扱い商品ページへ</h3>
+                    <p class="text-gray-600 flex-grow">安全靴から清掃用品まで、全ラインナップをご覧いただけます。</p>
+                </div>
+
+                <!-- 誘導用カード2 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-center text-center">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-8.64"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">失敗しない作業用品の選び方</h3>
+                    <p class="text-gray-600 flex-grow">専門家が選ぶ際のポイントを解説。貴社に最適な商品が見つかります。</p>
+                </div>
+                
+                <!-- 誘導用カード3 -->
+                <div class="card p-6 rounded-2xl flex flex-col items-center text-center">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15.5V9a2 2 0 012-2h12a2 2 0 012 2v6.5M10 21h4M12 17v4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">メーカーデジタルカタログ集</h3>
+                    <p class="text-gray-600 flex-grow">各メーカーの最新カタログをまとめてご覧いただけます。</p>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                <!-- リンクはplaceholderのまま -->
+                <a href="https://sites.google.com/view/gearity/%E5%95%86%E5%93%81%E9%96%A2%E9%80%A3" class="btn bg-blue-500 text-white hover:bg-blue-600">商品関連ページへ</a>
+                <a href="https://forms.gle/9weg5r4EDeez2n9y9" target="_blank" class="shine-button">
+                    ✉ お問い合わせはこちら
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
