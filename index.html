@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最高のWebデザイン - トップビジュアル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* HTML/BodyのスクロールはGoogleサイトに任せる */
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            background-color: #e6f7ff;
+            color: #1f2937;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        /* ヒーローセクションの上下の余白をレスポンシブに対応 */
+        .section {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+            position: relative;
+        }
+        /* スマホ向けに余白を小さく調整 */
+        .section-hero {
+            padding-top: 0rem; /* 余白をさらにゼロにしました */
+            padding-bottom: 0rem;
+        }
+        @media (min-width: 640px) {
+            .section-hero {
+                padding-top: 2rem; /* タブレット向けに調整 */
+                padding-bottom: 2rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .section-hero {
+                padding-top: 8rem;
+                padding-bottom: 8rem;
+            }
+        }
+        
+        .text-gradient {
+            background-image: linear-gradient(90deg, #38bdf8, #2563eb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+        }
+        .text-gradient-impact {
+            background-image: linear-gradient(90deg, #ff8c00, #ff4500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+        }
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #2563eb, #38bdf8);
+            color: white;
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+        .card {
+            background-color: white;
+            border-radius: 2.5rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px) rotate(-1deg);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        .card-icon-container {
+            transition: transform 0.3s ease;
+        }
+        .card-icon-container:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes cardEntry {
+            from { opacity: 0; transform: translateY(50px) rotate(-3deg); }
+            to { opacity: 1; transform: translateY(0) rotate(0); }
+        }
+        .animate-card-entry {
+            animation: cardEntry 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        .animate-up {
+            animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+        }
+        .section-separator {
+            margin: 8rem 0;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+        }
+
+        /* SVG Background Pattern */
+        .svg-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.1;
+        }
+        .why-us-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @media (min-width: 1024px) {
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* ホバー時の柔らかいアニメーションと影 */
+        .button-hover-effect {
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease-in-out;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 既存の影をより柔らかく */
+        }
+        .button-hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* ホバー時の影を少し濃く */
+        }
+
+        /* お問い合わせボタンのアニメーション */
+        @keyframes shine {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+        .shine-animation {
+            background: linear-gradient(135deg, #FF7800 30%, #ff983e 50%, #FF7800 70%);
+            background-size: 200% 100%;
+            animation: shine 2s infinite linear;
+            box-shadow: 0 6px 12px rgba(255, 120, 0, 0.4);
+        }
+        
+        .shadow-md {
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .shadow-lg {
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-[#e6f7ff]">
+
+<div class="container relative z-10">
+
+    <!-- Hero Section -->
+    <section class="section section-hero relative overflow-hidden flex flex-col items-center text-center">
+        <svg class="svg-background" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0 50 C25 25, 75 75, 100 50 S125 75, 150 50" fill="none" stroke="#2563eb" stroke-width="0.5"/>
+            <path d="M0 60 C25 35, 75 85, 100 60 S125 85, 150 60" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-dasharray="2,2"/>
+        </svg>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-gray-900 animate-fade-in">
+            <span class="inline-block text-center">製造工場の資材調達を<br>
+            <span class="text-gradient">もっと楽に、もっと安心に</span></span>
+        </h1>
+        <p class="text-lg sm:text-xl font-medium mb-10 max-w-2xl mx-auto text-gray-600 animate-up">
+            <span class="text-gradient-impact font-bold">年間72万円超</span>のコスト削減実績。取引企業1,000社以上。
+        </p>
+    </section>
+
+    <!-- CTA Section with 3 buttons -->
+    <section class="bg-transparent py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-center space-x-4">
+                <!-- 課題解決事例を見る -->
+                <a href="#" class="bg-blue-600 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-blue-700 transition-colors transform text-center text-base whitespace-nowrap button-hover-effect">
+                    課題解決事例を見る
+                </a>
+                <!-- カタログを見る・請求する -->
+                <a href="#" class="bg-transparent border border-blue-600 text-[#2563eb] font-semibold py-2 px-6 rounded-full shadow-md hover:bg-blue-50 transition-colors transform text-center text-base whitespace-nowrap button-hover-effect">
+                    カタログを見る・請求する
+                </a>
+                <!-- お問い合わせ -->
+                <a href="#" class="shine-animation text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:opacity-90 transition-opacity transform text-center text-base whitespace-nowrap button-hover-effect">
+                    お問い合わせ
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
